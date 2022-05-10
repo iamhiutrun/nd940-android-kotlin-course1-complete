@@ -9,10 +9,11 @@
             type="com.udacity.shoestore.viewmodels.LoginViewModel" />
     </data>
 
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="@dimen/margin_16"
         tools:context=".screens.LoginFragment">
 
         <TextView
@@ -20,7 +21,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="@dimen/margin_100"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/email" />
@@ -39,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@id/input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_20"
             android:text="@string/password" />
 
         <com.google.android.material.textfield.TextInputEditText
@@ -53,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintEnd_toEndOf="parent"
             android:onClick="@{()-> loginViewModel.login() }"
             android:text="@string/sign_in"

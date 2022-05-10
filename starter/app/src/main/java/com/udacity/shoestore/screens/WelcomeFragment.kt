@@ -18,7 +18,7 @@ class WelcomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentWelcomeBinding>(inflater, R.layout.fragment_welcome,container,false)
+        val binding = FragmentWelcomeBinding.inflate(inflater,container,false)
 
         binding.btnLetgo.setOnClickListener {
            findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToOnboardingFragment())

@@ -22,8 +22,7 @@ class ShoeListingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentShoeListingBinding>(layoutInflater,
-            R.layout.fragment_shoe_listing,container,false)
+        val binding = FragmentShoeListingBinding.inflate(inflater,container,false)
 
         binding.fab.setOnClickListener {
             findNavController().navigate(ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment())

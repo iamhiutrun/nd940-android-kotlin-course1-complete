@@ -7,6 +7,7 @@
 
     </data>
 
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/instructions_constraint_layout"
         android:layout_width="match_parent"
@@ -17,13 +18,10 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_margin="@dimen/margin_16"
             android:text="INSTRUCTION"
             android:textAlignment="center"
-            android:textSize="36sp"
+            android:textSize="@dimen/size_36"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +32,9 @@
             android:id="@+id/step_one"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="1. Tap + to add a new shoe"
-            android:textSize="24sp"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/step_one"
+            android:textSize="@dimen/size_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -47,13 +43,10 @@
             android:id="@+id/step_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:text="2. Tap Save Button to save the shoe"
-            android:textSize="24sp"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/step_two"
+            android:textSize="@dimen/size_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step_one" />
 
@@ -61,13 +54,10 @@
             android:id="@+id/step_three"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_margin="@dimen/margin_16"
             android:text="3. Tap Cancel Button to cancel the shoe"
-            android:textSize="24sp"
+            android:textSize="@dimen/size_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/step_two" />
 
@@ -75,9 +65,8 @@
             android:id="@+id/instructions_next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Next"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

@@ -6,7 +6,8 @@
             name="shoeListingViewModel"
             type="com.udacity.shoestore.viewmodels.ShoeListViewModel" />
     </data>
-
+    <!-- CoordinatorLayout because I used FAB button, when scrolling list, FAB still
+     place in bottom right of screen exactly-->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

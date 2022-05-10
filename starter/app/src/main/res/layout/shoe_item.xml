@@ -7,7 +7,7 @@
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
-
+<!--    Using MaterialCardView to circular border, elevation,...-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/shoeItemCardView"
         android:layout_width="match_parent"
@@ -18,52 +18,52 @@
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
         app:contentPadding="8dp">
-
+        <!-- Using a linear layout because it provides a more uniform look since we are  looping through variable data to display on the screen-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/margin_8"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="@dimen/margin_5"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="114dp"
+                    android:layout_width="@dimen/width_114"
                     android:layout_height="wrap_content"
                     android:text="@string/shoe_name" />
                 <TextView
                     android:id="@+id/shoe_name"
-                    android:layout_width="263dp"
+                    android:layout_width="@dimen/width_263"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="@dimen/margin_5"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="114dp"
+                    android:layout_width="@dimen/width_114"
                     android:layout_height="wrap_content"
                     android:text="@string/company_name" />
                 <TextView
                     android:id="@+id/company_name"
-                    android:layout_width="263dp"
+                    android:layout_width="@dimen/width_263"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="@dimen/margin_5"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="114dp"
+                    android:layout_width="@dimen/width_114"
                     android:layout_height="wrap_content"
                     android:text="@string/size" />
                 <TextView
                     android:id="@+id/tv_size"
-                    android:layout_width="262dp"
+                    android:layout_width="@dimen/width_263"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
-                    android:layout_width="114dp"
+                    android:layout_width="@dimen/width_114"
                     android:layout_height="wrap_content"
                     android:text="@string/description" />
                 <TextView

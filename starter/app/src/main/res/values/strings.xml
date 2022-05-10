@@ -16,4 +16,11 @@
     <string name="input_shoe_size">Input shoe size</string>
     <string name="description">Description</string>
     <string name="input_description">Input description</string>
+    <string name="step_two">2. Tap Save Button to save the shoe</string>
+    <string name="step_one">1. Tap + to add a new shoe</string>
+    <string name="next">Next</string>
+    <string name="input_company_name">Input company name</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="welcome_one">This app based on Kotlin Android Development by Udacity</string>
 </resources>

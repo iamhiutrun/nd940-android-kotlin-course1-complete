@@ -8,11 +8,11 @@
             name="shoeListingViewModel"
             type="com.udacity.shoestore.viewmodels.ShoeListViewModel" />
     </data>
-
+    <!-- Constraint Layout because I prefer to have the items place set in place but still adjust with the size of the screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="@dimen/margin_16"
         tools:context=".screens.ShoeDetailFragment">
 
         <TextView
@@ -21,20 +21,19 @@
             android:layout_height="wrap_content"
             android:text="Add Shoe"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_16"
             android:textAllCaps="true"
-            android:textSize="24sp"
+            android:textSize="@dimen/size_24"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
 
         <LinearLayout
             android:id="@+id/layout_shoe_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintTop_toBottomOf="@id/tv_header"
             android:orientation="horizontal">
             <TextView
@@ -42,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/shoe_name"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="@dimen/size_18" />
 
             <EditText
                 android:id="@+id/shoe_name"
@@ -58,8 +57,8 @@
             android:id="@+id/layout_company_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintTop_toBottomOf="@id/layout_shoe_name"
             android:orientation="horizontal">
             <TextView
@@ -67,13 +66,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/company_name"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="@dimen/size_18" />
 
             <EditText
                 android:id="@+id/et_company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Input company name"
+                android:hint="@string/input_company_name"
                 android:text="@={shoeListingViewModel.shoe.company}"
                 android:importantForAutofill="no"
                 android:layout_weight="3" />
@@ -83,8 +82,8 @@
             android:id="@+id/layout_shoe_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintTop_toBottomOf="@id/layout_company_name"
             android:orientation="horizontal">
             <TextView
@@ -92,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/size"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="@dimen/size_18" />
 
             <EditText
                 android:id="@+id/et_shoe_size"
@@ -109,8 +108,8 @@
             android:id="@+id/layout_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_16"
             app:layout_constraintTop_toBottomOf="@id/layout_shoe_size"
             android:orientation="horizontal">
             <TextView
@@ -118,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/description"
                 android:layout_weight="1"
-                android:textSize="18sp" />
+                android:textSize="@dimen/size_18" />
 
             <EditText
                 android:id="@+id/et_description"
@@ -131,7 +130,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/margin_16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,15 +142,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="@{()-> shoeListingViewModel.addShoe()}"
-                android:text="Save" />
+                android:text="@string/save" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_cancel"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="@dimen/margin_16"
                 android:onClick="@{()-> shoeListingViewModel.cancel()}"
                 android:layout_height="wrap_content"
-                android:text="Cancel" />
+                android:text="@string/cancel" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -21,11 +21,12 @@ class ShoeDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentShoeDetailBinding>(layoutInflater,
-            R.layout.fragment_shoe_detail,container,false)
+        val binding = FragmentShoeDetailBinding.inflate(inflater, container,false)
 
-        binding.shoeListingViewModel = shoeListViewModel
-        binding.lifecycleOwner = this
+        with(binding){
+            shoeListingViewModel = shoeListViewModel
+            lifecycleOwner = this@ShoeDetailFragment
+        }
 
         shoeListViewModel.popToShoeList.observe(viewLifecycleOwner) {
             if (it==true) {
