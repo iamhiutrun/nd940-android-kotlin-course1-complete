@@ -6,30 +6,42 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.LoginFragment"
+        android:name="com.udacity.shoestore.screens.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_onboardingFragment"
-            app:destination="@id/onboardingFragment" />
+            app:destination="@id/welcomeFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
-        android:id="@+id/onboardingFragment"
-        android:name="com.udacity.shoestore.OnboardingFragment"
-        android:label="OnboardingFragment" >
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.shoestore.screens.InstructionFragment"
+        android:label="InstructionFragment" >
         <action
             android:id="@+id/action_onboardingFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
-        android:name="com.udacity.shoestore.ShoeDetailFragment"
+        android:name="com.udacity.shoestore.screens.ShoeDetailFragment"
         android:label="ShoeDetailFragment" />
     <fragment
         android:id="@+id/shoeListingFragment"
-        android:name="com.udacity.shoestore.ShoeListingFragment"
+        android:name="com.udacity.shoestore.screens.ShoeListingFragment"
         android:label="ShoeListingFragment" >
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
-            app:destination="@id/shoeDetailFragment" />
+            app:destination="@id/shoeDetailFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.screens.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_onboardingFragment"
+            app:destination="@id/instructionFragment" />
     </fragment>
 </navigation>
